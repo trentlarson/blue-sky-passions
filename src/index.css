@@ -68,3 +68,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* style nav tag with horizontal list */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5em;
+  margin-bottom: 1.5em;
+}
+nav li {
+  display: inline-block;
+  margin: 0.3em 0.6em;
+}
