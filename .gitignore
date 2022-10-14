@@ -6,7 +6,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-.yarn/
 
 *.local
 
@@ -71,6 +70,8 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+.yarn/cache
+.yarn/install-state.gz
 
 # dotenv environment variables file
 .env
