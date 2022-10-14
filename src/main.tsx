@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import {
     createBrowserRouter,
     RouterProvider,
@@ -19,6 +20,7 @@ import Contacts from "./Pages/Contacts";
 import Project from "./Pages/Project";
 import Projects from "./Pages/Projects";
 import FromYou from "./Pages/FromYou";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
 const router = createBrowserRouter([
     {
@@ -49,9 +51,13 @@ const router = createBrowserRouter([
     },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
+const queryClient = new QueryClient()
 
-  </React.StrictMode>
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+    <QueryClientProvider client={queryClient}>
+        <React.StrictMode>
+            <RouterProvider router={router}/>
+            <ReactQueryDevtools initialIsOpen={false} />
+        </React.StrictMode>
+    </QueryClientProvider>
 )
