@@ -1,0 +1,11 @@
+- designs for 3 pages id:first-designs assignee:anomalist :
+  - create a project
+  - search for projects & see how much time is committed
+  - commit my own time to a project
+- review designs id:first-review assignee:trent
+   - awaits : [ref:first-designs]
+- integrate first designs with existing code assignee:anomalist
+   - awaits : [ref:first-review]
+- iteration #2 on funding proposal
+  - expand metrics - pledgers/participants
+  - fold in Open Access Economy?
